@@ -1,0 +1,63 @@
+
+.heroBannerContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    z-index: 1000;
+    color: rgb(255 255 255);
+    font-family: emoji;
+    top: 4rem;
+}
+.heroBannerImage{
+    background-color: rgb(51, 51, 106);
+    width: 100vw;
+    height: 93vh;
+    position:relative;
+    z-index:100;
+    background-image: linear-gradient(rgb(82, 77, 77), white);
+    overflow: hidden;
+}
+.title{
+    font-size: 3rem;
+}
+.subTitle{
+    font-size: 1.8rem;
+    margin-bottom: 1.3rem;
+}
+.form{
+    width: 65%;
+}
+.form input{
+    width: 80%;
+    height: 2.5rem;
+    border-radius: 9px;
+    text-align: center;
+    font-family: auto;
+    font-size: 1.4rem;
+}
+.form button{
+    padding: 0.21rem 1rem;
+    border-radius: 7px;
+    background-color: white;
+    margin-left: 0.5rem;
+    margin-top: 0.6rem;
+    font-size: 1.2rem;
+}
+button:active{
+    transform: translateY(3px);
+}
+@media(max-width:600px){
+    .form input{
+        font-size: 0.8rem;
+    }
+    }
+    .img{
+        width: 100vw;
+        height: 92.7vh;
+        overflow: hidden;
+    }

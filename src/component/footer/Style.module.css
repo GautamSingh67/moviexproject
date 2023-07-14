@@ -1,0 +1,18 @@
+.footerHead{
+    background-color: black;
+    color: white;
+    margin-top: 2.5rem;
+}
+.footer{
+    display: flex;
+    justify-content:space-evenly;
+}
+.footer li{
+    list-style-type: none;
+    font-size: large;
+    cursor: pointer;
+}
+.footerBootom{
+    text-align: center;
+    margin: 1rem 1rem 0rem 1rem ;
+}

@@ -59,7 +59,7 @@ export function Popular() {
             {data.results.map((item, index) => {
               const posterUrl = url.poster + item.poster_path
               return <div key={index} className={style['carousalContent']}>
-                <div style={{marginTop:'2rem'}}>
+                <div style={{marginTop:'0.5rem'}}>
                   <Img title={item.original_title} src={posterUrl} alt='image' className={style['carouselImage']} /><br />
                 </div>
               </div>

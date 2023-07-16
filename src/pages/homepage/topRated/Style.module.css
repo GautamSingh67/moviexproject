@@ -3,8 +3,8 @@
     justify-content: space-between;
     font-size: 1.5rem;
     font-weight: 700;
+    margin: 0rem 0.5rem;
     color: rgba(243, 231, 231, 0.776);
-    margin-top: 3rem;
 }
 .trending{
     margin: 1rem;

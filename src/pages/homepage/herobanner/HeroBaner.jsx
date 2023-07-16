@@ -43,10 +43,10 @@ export function HeroBaner() {
     <div className={style['herobanner']}>
       <ContentWrapper>
         <div className={style['heroBannerImage']}>
-          {loading && <h1 style={{ textAlign: 'center' }}>Loading...</h1>}
           {
             !loading && <Img src={background} alt="img" className={style['img']} />
           }
+          <div className={style['opacity']}></div>
         </div>
         <div className={style['heroBannerContent']}>
           <span className={style['title']}>Welcome</span>

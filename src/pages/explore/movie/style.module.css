@@ -1,0 +1,26 @@
+.parent{
+    margin-top: 1rem;
+}
+.child{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+.image{
+    width: 14vw;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media(max-width:1300px){
+    .image{
+        width: 18vw;
+    }
+}
+
+@media(max-width:700px){
+    .image{
+        width: 25vw;
+    }
+}

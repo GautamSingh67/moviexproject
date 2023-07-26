@@ -8,6 +8,8 @@ import { useDispatch} from 'react-redux';
 import { getApiConfiguration } from './store/homeSlice';
 import axios from 'axios';
 import { Footer } from './component/footer/Footer';
+import { Movie } from './pages/explore/movie/Movie';
+import { Tv } from './pages/explore/tv/Tv';
 function App() {
   const dispatch = useDispatch();
   async function getApi() {
@@ -25,14 +27,17 @@ function App() {
 
   return (
     <div>
-      <Header />
       <BrowserRouter>
+      <Header />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/search/:query' element={<SearchDetails />} />
+          <Route path="/explore/movie" element={<Movie/>} />
+          <Route path="/explore/tv" element={<Tv/>} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
-      <Footer/>
+      
     </div>
   )
 }

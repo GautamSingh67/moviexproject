@@ -10,6 +10,9 @@ body{
 .container-fluid{
     z-index: 10000;
 }
+.navigate{
+  cursor: pointer;
+}
 .hoverEffect{
     font-weight: 600;
     font-family: sans-serif;

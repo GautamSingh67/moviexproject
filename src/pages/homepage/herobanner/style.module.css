@@ -72,4 +72,5 @@ button:active{
         width: 100vw;
         height: 92.7vh;
         overflow: hidden;
+        object-fit:cover
     }

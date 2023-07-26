@@ -13,10 +13,7 @@ export function Popular() {
   const [endpoint, setEndpoint] = useState("movie");
   const { data, loading } = Usefetch(`https://api.themoviedb.org/3/${endpoint}/popular?api_key=7375e5209b35a7926f88e480159467be`)
   const { url } = useSelector((state) => state.home);
-  if (!loading) {
-    console.log(url.poster + data.results[0].poster_path);
-  }
-  console.log(data.results);
+  
   function handle1() {
     setButton2("");
     setButton1("button1");

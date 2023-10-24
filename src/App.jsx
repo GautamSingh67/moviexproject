@@ -10,6 +10,7 @@ import axios from 'axios';
 import { Footer } from './component/footer/Footer';
 import { Movie } from './pages/explore/movie/Movie';
 import { Tv } from './pages/explore/tv/Tv';
+import {MovieDetail} from './pages/details/MovieDetail';
 function App() {
   const dispatch = useDispatch();
   async function getApi() {
@@ -34,6 +35,7 @@ function App() {
           <Route path='/search/:query' element={<SearchDetails />} />
           <Route path="/explore/movie" element={<Movie/>} />
           <Route path="/explore/tv" element={<Tv/>} />
+          <Route path='/:query/:query' element={<MovieDetail/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
@@ -43,3 +45,5 @@ function App() {
 }
 
 export default App
+
+//moviextmdb

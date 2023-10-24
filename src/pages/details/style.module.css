@@ -1,0 +1,75 @@
+.posterImage{
+    width: 25%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.content1{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 90ch;
+}
+.content2{
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 1rem;
+}
+.title{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: serif;
+}
+.tagline{
+    font-size: larger;
+    font-weight: 500;
+    color: #d4cdcd;
+    font-style: italic;
+    margin-top: 0.2rem;
+}
+.generes{
+    display: flex;
+    gap: 2%;
+    margin-top: 1rem;
+}
+.generes span{
+    background: #f3a71c;
+    color: black;
+    border-radius: 7px;
+    padding: 2px 8px;
+    font-weight: 600;
+    font-family: serif;
+    font-size: medium;
+}
+.reting{
+    font-size: larger;
+    font-weight: 600;
+    font-family: serif;
+    margin-top: 1rem;
+}
+.overview{
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: serif;
+    margin-top: 0.4rem;
+}
+.overviewDetail{
+    font-family: serif;
+    font-size: larger;
+    font-weight: 500;
+    color: #d4cdcd;
+}
+.status{
+    display: flex;
+    gap: 3%;
+    margin-top: 1.4rem;
+    font-size: large;
+    font-weight: 600;
+    font-family: serif;
+}
+.statusDetail span{
+    color:#d4cdcd;
+}
+.dirWri{
+    color:#d4cdcd;
+}

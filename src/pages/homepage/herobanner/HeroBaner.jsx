@@ -18,6 +18,7 @@ export function HeroBaner() {
   useEffect(() => {
     if (!loading) {
       const image = url.backdrop + data.results[Math.floor(Math.random() * 20)].backdrop_path;
+      console.log(image);
       setBackgroung(image);
     }
   }, [data, loading, url.backdrop]);
@@ -52,7 +53,7 @@ export function HeroBaner() {
           <span className={style['title']}>Welcome</span>
           <span className={style['subTitle']}>Millions of movies, TV shows and people to discover. Explore now</span>
           <div className={style['form']}>
-            <input type='text' placeholder='Search for a movie or tv show.....' value={searchInput} onChange={(e) => setSearchInput(e.target.value)} onKeyUp={searchQueryHandler} />
+            <input type='search' placeholder='Search for a movie or tv show.....' value={searchInput} onChange={(e) => setSearchInput(e.target.value)} onKeyUp={searchQueryHandler} />
             <button type='button' onClick={handleSubmit}>Search</button>
           </div>
         </div>

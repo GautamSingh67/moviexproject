@@ -6,6 +6,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useSelector } from 'react-redux';
 import { Img } from '../../../component/lazyLoadImage/Img';
+import { useNavigate } from 'react-router-dom';
 
 export function Trending() {
   const [button1, setButton1] = useState("button1");
@@ -13,7 +14,7 @@ export function Trending() {
   const [endpoint, setEndpoint] = useState("day");
   const { data, loading } = Usefetch(`https://api.themoviedb.org/3/trending/movie/${endpoint}?api_key=7375e5209b35a7926f88e480159467be`)
   const { url } = useSelector((state) => state.home);
- 
+  const navigate = useNavigate();
   function handle1() {
     setButton2("");
     setButton1("button1");
@@ -40,6 +41,10 @@ export function Trending() {
     }
   };
 
+  function movieDetail(id,media_type){
+      navigate(`./${media_type}/${id}`);
+  }
+
   return (
     <div className={style['trending']}>
       <ContentWrapper>
@@ -51,19 +56,21 @@ export function Trending() {
           </div>
         </div>
 
-        {
-          !loading && <Carousel responsive={responsive} infinite={true}  removeArrowOnDeviceType={["tablet", "mobile"]}>
-            {data.results.map((item, index) => {
+        
+            <Carousel responsive={responsive} infinite={true}  removeArrowOnDeviceType={["tablet", "mobile"]}>
+            {!loading &&
+            data.results.map((item, index) => {
               const posterUrl = url.poster + item.poster_path
               return <div key={index} className={style['carousalContent']}>
                 <div style={{marginTop:'0.5rem'}}>
-                  <Img title={item.original_title} src={posterUrl} alt='image' className={style['carouselImage']} /><br />
+                  <Img title={item.original_title} src={posterUrl} alt='image' className={style['carouselImage']} onClick={()=>movieDetail(item.id,item.media_type)}/><br />
                 </div>
               </div>
 
             })}
+          
           </Carousel>
-        }
+        
 
 
       </ContentWrapper>

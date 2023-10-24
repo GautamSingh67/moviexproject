@@ -21,8 +21,6 @@ export function MovieDetail() {
         })
     }
 
-    console.log(data);
-
 
     return (
         <div>

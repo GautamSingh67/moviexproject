@@ -9,9 +9,6 @@ export function Tv() {
   const [loading,setLoading] = useState(true);
   const [data,setData] = useState([]);
   const { url } = useSelector((state) => state.home);
- useEffect(()=>{
-    showData();
-  },[]);
   
 
  async function showData(){
@@ -19,6 +16,7 @@ export function Tv() {
      setData(responce.data);
     setLoading(false);
   }
+  showData();
   
  async function moreScroll(){
   const responce = await axios.get(`https://api.themoviedb.org/3/discover/tv?page=${page}&api_key=7375e5209b35a7926f88e480159467be`);

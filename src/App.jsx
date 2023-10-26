@@ -36,6 +36,7 @@ function App() {
           <Route path="/explore/movie" element={<Movie/>} />
           <Route path="/explore/tv" element={<Tv/>} />
           <Route path='/:query/:query' element={<MovieDetail/>}/>
+          <Route path='/explore/movie/:query' element = {<MovieDetail/>} />
         </Routes>
         <Footer/>
       </BrowserRouter>

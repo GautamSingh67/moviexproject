@@ -4,18 +4,21 @@ import { useSelector } from 'react-redux';
 import style from './style.module.css';
 import { Img } from './../../../component/lazyLoadImage/Img';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 export function Movie() {
   const [page,setPage] = useState(1);
   const [loading,setLoading] = useState(true);
   const [data,setData] = useState([]);
   const { url } = useSelector((state) => state.home);
+  const navigate = useNavigate();
+
  useEffect(()=>{
     showData();
   },[]);
   
 
  async function showData(){
-    const responce = await axios.get(`https://api.themoviedb.org/3/discover/movie?page=${page}&api_key=7375e5209b35a7926f88e480159467be`);
+    const responce = await axios.get(`https://api.themoviedb.org/3/discover/movie?page=1&api_key=7375e5209b35a7926f88e480159467be`);
      setData(responce.data);
     setLoading(false);
   }
@@ -36,6 +39,10 @@ export function Movie() {
      setPage((page)=>page+1);
      moreScroll();
   }
+  const endpoint = "movie"
+  function movieDetail(id){
+    navigate(`/${endpoint}/${id}`);
+}
 
   return (
     <div className={style['parent']}>
@@ -52,7 +59,7 @@ export function Movie() {
             data.results.map((item, index) => {
               let image = url.poster + item.poster_path
               return <div key={index}>
-                <Img src={image} alt='img' className={style['image']}/>
+                <Img src={image} alt='img' className={style['image']} onClick={()=>movieDetail(item.id,item.media_type)} />
             </div>
             })
           }

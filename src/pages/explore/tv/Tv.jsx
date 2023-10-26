@@ -15,7 +15,7 @@ export function Tv() {
   
 
  async function showData(){
-    const responce = await axios.get(`https://api.themoviedb.org/3/discover/tv?page=${page}&api_key=7375e5209b35a7926f88e480159467be`);
+    const responce = await axios.get(`https://api.themoviedb.org/3/discover/tv?page=1&api_key=7375e5209b35a7926f88e480159467be`);
      setData(responce.data);
     setLoading(false);
   }

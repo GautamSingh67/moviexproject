@@ -4,6 +4,7 @@ import { useLocation} from 'react-router-dom';
 import { Usefetch } from '../../customHook/Usefetch';
 import { useSelector } from 'react-redux';
 import { Usefetch1 } from './../../customHook/Usefetch1';
+import { TopCast } from '../../component/topCast/TopCast';
 
 
 export function MovieDetail() {
@@ -21,7 +22,6 @@ export function MovieDetail() {
         })
     }
 
-    console.log(data);
 
 
     return (
@@ -52,10 +52,10 @@ export function MovieDetail() {
                         <span>Writer: </span>
                         <span className={style['dirWri']}>{writer}</span>
                         </div>
-                       
                     </div>
                 </div>
             }
+            <TopCast data = {data1.cast} loading = {loading1}/>
         </div>
     )
 }

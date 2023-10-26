@@ -16,5 +16,5 @@ export function Usefetch(url){
                 setError("Something went wrong");
              })
     },[url])
-    return {data, loading, error};
+    return {data, setData, loading, error};
 }

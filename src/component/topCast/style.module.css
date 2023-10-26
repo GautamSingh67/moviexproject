@@ -1,0 +1,79 @@
+.head{
+    margin: 0rem 2rem;
+}
+.poster{
+    margin-top: 0.4rem;
+    width: 15vw;
+    height: 15em;
+    border-radius: 50%;
+}
+.heading{
+    margin-top: 2rem;
+    font-family: serif;
+    font-weight: 600;
+    color: white;
+    font-size: 2rem;
+}
+.carouselImage{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.imageChar{
+    color: white;
+    font-size: 1.3rem;
+    font-family: serif;
+    font-weight: 600;
+
+}
+.imgName{
+    color: rgb(231, 233, 235);
+    font-family: serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+@media only screen and (max-width: 1024px){
+    .poster{
+        width: 17vw;
+        height: 12rem;
+    }
+    .head{
+        margin: 0rem 0.2rem;
+    }
+}
+@media only screen and (max-width: 800px){
+    .poster{
+        width: 16vw;
+        height: 10rem;
+    }
+    .head{
+        margin: 0rem 0.2rem;
+    }
+}
+@media only screen and (max-width: 750px){
+    .poster{
+        width: 17vw;
+        height:8rem;
+    }
+    .head{
+        margin: 0rem 0.2rem;
+    }
+}
+@media only screen and (max-width: 650px){
+    .poster{
+        width: 16vw;
+        height: 6rem;
+    }
+    .head{
+        margin: 0rem 0.2rem;
+    }
+}
+@media only screen and (max-width: 550px){
+    .poster{
+        width: 18vw;
+        height: 7rem;
+    }
+    .head{
+        margin: 0rem 0.2rem;
+    }
+}

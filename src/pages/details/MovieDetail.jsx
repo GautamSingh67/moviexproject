@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import style from './style.module.css';
 import { useLocation} from 'react-router-dom';
 import { Usefetch } from '../../customHook/Usefetch';
@@ -21,7 +21,6 @@ export function MovieDetail() {
             else return "";
         })
     }
-
 
 
     return (

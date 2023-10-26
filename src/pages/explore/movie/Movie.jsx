@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { useSelector } from 'react-redux';
 import style from './style.module.css';
@@ -15,13 +15,13 @@ export function Movie() {
  useEffect(()=>{
     showData();
   },[]);
-  
 
  async function showData(){
     const responce = await axios.get(`https://api.themoviedb.org/3/discover/movie?page=1&api_key=7375e5209b35a7926f88e480159467be`);
      setData(responce.data);
     setLoading(false);
   }
+  showData();
   
  async function moreScroll(){
   const responce = await axios.get(`https://api.themoviedb.org/3/discover/movie?page=${page}&api_key=7375e5209b35a7926f88e480159467be`);

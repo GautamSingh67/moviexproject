@@ -1,10 +1,9 @@
 .head{
-    margin: 0rem 2rem;
+    margin: 0rem 1rem;
 }
 .poster{
-    margin-top: 0.4rem;
-    width: 15vw;
-    height: 15em;
+    margin: 0rem 1rem 0rem 0rem;
+    width: 97%;
     border-radius: 50%;
 }
 .heading{
@@ -32,48 +31,4 @@
     font-weight: 600;
     font-size: 1.1rem;
 }
-@media only screen and (max-width: 1024px){
-    .poster{
-        width: 17vw;
-        height: 12rem;
-    }
-    .head{
-        margin: 0rem 0.2rem;
-    }
-}
-@media only screen and (max-width: 800px){
-    .poster{
-        width: 16vw;
-        height: 10rem;
-    }
-    .head{
-        margin: 0rem 0.2rem;
-    }
-}
-@media only screen and (max-width: 750px){
-    .poster{
-        width: 17vw;
-        height:8rem;
-    }
-    .head{
-        margin: 0rem 0.2rem;
-    }
-}
-@media only screen and (max-width: 650px){
-    .poster{
-        width: 16vw;
-        height: 6rem;
-    }
-    .head{
-        margin: 0rem 0.2rem;
-    }
-}
-@media only screen and (max-width: 550px){
-    .poster{
-        width: 18vw;
-        height: 7rem;
-    }
-    .head{
-        margin: 0rem 0.2rem;
-    }
-}
+

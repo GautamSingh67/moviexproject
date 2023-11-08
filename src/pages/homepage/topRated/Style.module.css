@@ -40,35 +40,10 @@
     width: 25vw;
 }
 
-.carouselHead{
-    margin-top: 1rem;
+.poster{
+    margin: 0rem 1rem 0rem 0rem;
+    width: 97%;
+    border-radius: 5%;
+    cursor: pointer;
 }
-.carouselImage{
-    max-width: 25vw;
-    height: auto;
-    border-radius: 0.6rem;
-    cursor: pointer;    
-}
-@media(max-width:3000px){
-    .carouselImage{
-        max-width: 19vw;
-    }
-}
-@media(max-width:1024px){
-    .carouselImage{
-        max-width: 22vw;
-    }
-}
-@media(max-width:464px){
-    .carouselImage{
-        max-width: 29vw;
-    }
-}
-@media(max-width:430px){
-    .carouselImage{
-        max-width: 29vw;
-    }
-}
-.carousalContent{
-    text-align: center;
-}
+

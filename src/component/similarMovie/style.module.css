@@ -1,0 +1,16 @@
+.head{
+    margin: 0rem 1rem;
+}
+.heading{
+    margin-top: 2rem;
+    font-family: serif;
+    font-weight: 600;
+    color: white;
+    font-size: 2rem;
+}
+.poster{
+    margin: 0rem 1rem 0rem 0rem;
+    width: 97%;
+    border-radius: 5%;
+    cursor: pointer;
+}

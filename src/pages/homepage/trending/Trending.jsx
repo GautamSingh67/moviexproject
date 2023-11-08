@@ -29,11 +29,11 @@ export function Trending() {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 5,
+      items: 7,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 4,
+      items: 7,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -41,8 +41,8 @@ export function Trending() {
     }
   };
 
-  function movieDetail(id,media_type){
-      navigate(`./${media_type}/${id}`);
+  function movieDetail(id, media_type) {
+    navigate(`./${media_type}/${id}`);
   }
 
   return (
@@ -56,21 +56,20 @@ export function Trending() {
           </div>
         </div>
 
-        
-            <Carousel responsive={responsive} infinite={true}  removeArrowOnDeviceType={["tablet", "mobile"]}>
-            {!loading &&
+
+        <Carousel responsive={responsive} infinite={true} removeArrowOnDeviceType={["tablet", "mobile"]}>
+          {!loading &&
             data.results.map((item, index) => {
               const posterUrl = url.poster + item.poster_path
-              return <div key={index} className={style['carousalContent']}>
-                <div style={{marginTop:'0.5rem'}}>
-                  <Img title={item.original_title} src={posterUrl} alt='image' className={style['carouselImage']} onClick={()=>movieDetail(item.id,item.media_type)}/><br />
-                </div>
+              return <div key={index}>
+                <Img title={item.original_title} src={posterUrl} alt='image' onClick={() => movieDetail(item.id, item.media_type)} className={style['poster']} />
+
               </div>
 
             })}
-          
-          </Carousel>
-        
+
+        </Carousel>
+
 
 
       </ContentWrapper>

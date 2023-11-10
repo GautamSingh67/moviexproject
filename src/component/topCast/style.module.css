@@ -7,11 +7,13 @@
     border-radius: 50%;
 }
 .heading{
-    margin-top: 2rem;
+    background-color: white;
+    color: #005e5e;
+    padding: 0.3rem 2rem;
+    border-radius: 2rem;
     font-family: serif;
-    font-weight: 600;
-    color: white;
-    font-size: 2rem;
+    font-size: 1.6rem; 
+    margin-top: 2.5rem;
 }
 .carouselImage{
     display: flex;

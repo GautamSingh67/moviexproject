@@ -12,7 +12,7 @@ export function Recommendation() {
     const location = useLocation();
     const { data, loading } = Usefetch(`https://api.themoviedb.org/3/${location.pathname}/recommendations?api_key=7375e5209b35a7926f88e480159467be`);
     const { url } = useSelector((state) => state.home);
-
+    let media = location.pathname.split("/");
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
@@ -27,15 +27,14 @@ export function Recommendation() {
             items: 3,
         }
     };
-
-    const endpoint = "movie"
+    
     function movieDetail(id) {
-        navigate(`/${endpoint}/${id}`);
+        navigate(`/${media[1]}/${id}`);
     }
 
     return (
         <div className={style['head']}>
-            <h2 className={style['heading']}>Recommendation Movies</h2>
+            <h2 className={style['heading']}>{`Recommendation ${media[1]}`}</h2>
 
             {
                 !loading &&

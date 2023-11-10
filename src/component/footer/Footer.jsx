@@ -1,11 +1,13 @@
 import React from 'react'
 import style from './Style.module.css'
+import { Link} from 'react-router-dom';
 export function Footer() {
+
   return (
     <section className={style['footerHead']}>
         <div className={style['footer']}>
         <div>
-            <li>Home</li>
+            <li><Link to={"/"} className={style['link']}>Home</Link></li>
             <li>About</li>
             <li>FAQ</li>
             <li>Privacy Police</li>
@@ -14,21 +16,17 @@ export function Footer() {
         </div>
         <div>
             <h2>Contact Us</h2>
-            <li>LinkedIn</li>
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>Twitter</li>
+            <li><Link to={`https://www.linkedin.com/in/gautam-singh67/`} className={style['link']}>LinkedIn</Link></li>
+            <li><Link to={`https://www.facebook.com/`} className={style['link']}>Facebook</Link></li>
+            <li><Link to={`https://www.instagram.com/`} className={style['link']}>Instagram</Link></li>
+            <li><Link to={`https://twitter.com/`} className={style['link']}>Twitter</Link></li>
         </div>
         <div>
             <h2>Explore</h2>
-            <li>Movies</li>
-            <li>TV Shows</li>
+            <li><Link to = {'/explore/movie'} reloadDocument className={style['link']}>Movies</Link></li>
+            <li><Link to = {'/explore/tv'} reloadDocument className={style['link']}>TV Shows</Link></li>
         </div>
         </div>
-        <div className={style['footerBootom']}>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, nobis quam at doloribus nihil cumque obcaecati alias corrupti nemo sed!</p>
-        </div>
-
     </section>
   )
 }

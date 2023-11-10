@@ -28,3 +28,23 @@ body{
     justify-content: flex-end;
 }
 }
+.logoHead{
+    cursor: pointer;
+    background-image: linear-gradient(red, yellow);
+    border-radius: 1rem;
+    padding: 0rem 2rem;
+}
+.logo1{
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 900;
+    font-family: serif;
+    color: #005e5e;
+}
+.logo2{
+    padding: 0.1rem 2rem;
+    background-color: #005e5e;
+    margin-left: 0.5rem;
+    border-radius: 1rem;
+    
+}

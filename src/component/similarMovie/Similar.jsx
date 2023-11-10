@@ -12,6 +12,7 @@ export function Similar() {
     const location = useLocation();
     const { data, loading } = Usefetch(`https://api.themoviedb.org/3/${location.pathname}/similar?api_key=7375e5209b35a7926f88e480159467be`);
     const { url } = useSelector((state) => state.home);
+    let media = location.pathname.split("/");
 
     const responsive = {
         desktop: {
@@ -28,14 +29,13 @@ export function Similar() {
         }
     };
 
-    const endpoint = "movie"
     function movieDetail(id) {
-        navigate(`/${endpoint}/${id}`);
+        navigate(`/${media[1]}/${id}`);
     }
 
     return (
         <div className={style['head']}>
-            <h2 className={style['heading']}>Similar Movies</h2>
+            <h2 className={style['heading']}>{`Similar ${media[1]}`}</h2>
 
             {
                 !loading &&

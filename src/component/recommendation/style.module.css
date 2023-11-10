@@ -3,10 +3,12 @@
 }
 .heading{
     margin-top: 2rem;
+    background-color: white;
+    color: #005e5e;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
     font-family: serif;
-    font-weight: 600;
-    color: white;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 .poster{
     margin: 0rem 1rem 0rem 0rem;

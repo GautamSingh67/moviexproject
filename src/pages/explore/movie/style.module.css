@@ -4,23 +4,28 @@
 .child{
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.5rem;
     justify-content: center;
 }
 .image{
-    width: 14vw;
+    width: 13vw;
     height: auto;
     border-radius: 5px;
     cursor: pointer;
 }
 @media(max-width:1300px){
     .image{
-        width: 18vw;
+        width: 15vw;
     }
 }
 
 @media(max-width:700px){
     .image{
-        width: 25vw;
+        width: 18vw;
+    }
+}
+@media(max-width:600px){
+    .image{
+        width: 20vw;
     }
 }

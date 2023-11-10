@@ -2,31 +2,31 @@
     display: flex;
     justify-content: space-between;
     font-size: 1.5rem;
-    margin: 0rem 0.5rem;
+    margin: 1rem 0.5rem;
     font-weight: 700;
-    color: rgba(243, 231, 231, 0.776);
+    color: #005e5e;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-family: serif;
 }
 .trending{
     margin-left: 1rem;
     margin-right: 1rem;
 }
-.switchTab{
-    background-color: black;
-    color: white;
-    border-radius: 1rem;
-}
 .switchTab span{
-    padding: 0rem 1rem;
-    border-radius: 1rem;
-   cursor: pointer;
-}
-.button1{
-    background-color: red;
+    cursor: pointer;
+    border-radius: 2rem;
+    padding: 0.2rem 1.4rem;
     transition-delay: 0.1s;
+}
+
+.button1{
+    background-color: #dc42427a;
+    margin-right: 0.2rem;
 }
 .button2{
-    background-color: red;
-    transition-delay: 0.1s;
+    background-color: #dc42427a;
 }
 .red{
     width: 100vw;

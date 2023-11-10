@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './movieLogo.svg'
 import style from './style.module.css'
 import { useNavigate } from 'react-router-dom';
 export function Header() {
@@ -14,8 +13,9 @@ export function Header() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
-                <div style={{cursor:"pointer"}}>
-                    <img src={logo} alt="Logo" width="200" onClick={handleLogo} />
+                <div onClick={handleLogo} className='logoHead'>
+                    <span  className='logo1'>MovieDekho</span>
+                    <span className='logo2'></span>
                 </div>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

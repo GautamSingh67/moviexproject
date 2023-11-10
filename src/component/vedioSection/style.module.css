@@ -12,10 +12,12 @@
 }
 .heading{
     margin-top: 2rem;
+    background-color: white;
+    color: #005e5e;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
     font-family: serif;
-    font-weight: 600;
-    color: white;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 .clipPath{
     clip-path: polygon(87% 48%, 0 8%, 0 91%);

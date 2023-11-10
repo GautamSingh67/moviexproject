@@ -6,21 +6,24 @@
     align-items: center;
     text-align: center;
     position: absolute;
-    width: 100%;
-    height: 85%;
     z-index: 1000;
     color: rgb(255 255 255);
-    font-family: emoji;
-    top: 1rem;
+    font-family: serif;
+    top: 17%;
+    width: 100%;
 }
 .heroBannerImage{
     background-color: rgb(51, 51, 106);
-    width: 100%;
-    height: 93vh;
     position:relative;
     z-index:100;
     background-image: linear-gradient(rgb(82, 77, 77), white);
     overflow: hidden;
+}
+.img{
+    width: 100vw;
+    height: 92.7vh;
+    overflow: hidden;
+    object-fit:cover
 }
 .opacity{
     width: 100%;
@@ -47,6 +50,7 @@
 .form{
     width: 100%;
 }
+
 .form input{
     width: 75%;
     height: 3.3rem;
@@ -69,14 +73,33 @@
 button:active{
     transform: translateY(3px);
 }
-@media(max-width:600px){
+@media(max-width:1030px){
+    .img{
+        height: 43.7vh;
+    }
+    .heroBannerContent{
+        top: 8%;
+    }
+}
+@media(max-width:500px){
+    .heroBannerContent{
+        top: 10%;
+    }
     .form input{
         font-size: 0.8rem;
+        height: 2.3rem;
     }
+    .form button{
+        font-size: 1.1rem;
     }
     .img{
-        width: 100vw;
-        height: 92.7vh;
-        overflow: hidden;
-        object-fit:cover
+        height: 36.7vh;
     }
+    .title{
+        font-size: 3rem;
+    }
+    .subTitle{
+        font-size: 1rem;
+    }
+    }
+    

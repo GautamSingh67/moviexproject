@@ -48,3 +48,15 @@ body{
     border-radius: 1rem;
     
 }
+@media(max-width:600px){
+    .logoHead{
+        padding: 0.1rem 0.5rem
+    }
+    .logo1{
+        font-size: 1rem;
+    }
+    .logo2{
+        padding: 0rem 1.6rem;
+        margin-left: 0.3rem;
+    }
+}

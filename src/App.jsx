@@ -11,6 +11,7 @@ import { Footer } from './component/footer/Footer';
 import { Movie } from './pages/explore/movie/Movie';
 import { Tv } from './pages/explore/tv/Tv';
 import {MovieDetail} from './pages/details/MovieDetail';
+
 function App() {
   const dispatch = useDispatch();
   async function getApi() {

@@ -1,4 +1,6 @@
-
+.herobanner{
+    position: relative;
+}
 .heroBannerContent{
     display: flex;
     flex-direction: column;

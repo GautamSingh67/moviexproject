@@ -6,7 +6,7 @@ import { Img } from './../../../component/lazyLoadImage/Img';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 export function Movie() {
-  const [page,setPage] = useState(1);
+  let [page,setPage] = useState(1);
   const [loading,setLoading] = useState(true);
   const [data,setData] = useState([]);
   const { url } = useSelector((state) => state.home);
@@ -21,24 +21,19 @@ export function Movie() {
      setData(responce.data);
     setLoading(false);
   }
-  showData();
   
  async function moreScroll(){
+  setPage(++page);
   const responce = await axios.get(`https://api.themoviedb.org/3/discover/movie?page=${page}&api_key=7375e5209b35a7926f88e480159467be`);
-  if(data.results){
+  if(data?.results){
     setData({
       ...data,
-      results:[...data.results,...responce.data.results],
+      results:[...data?.results,...responce.data.results],
     });
     setLoading(false);
   }
-  
- }
+}
 
-  function nextPage(){
-     setPage((page)=>page+1);
-     moreScroll();
-  }
   const endpoint = "movie"
   function movieDetail(id){
     navigate(`/${endpoint}/${id}`);
@@ -47,12 +42,12 @@ export function Movie() {
   return (
     <div className={style['parent']}>
       {
-        !loading && <InfiniteScroll
+      !loading && <InfiniteScroll
          className={style['child']}
          dataLength={data.results.length}
-         next={nextPage} 
-         hasMore = {page <= data.total_pages}
-         loader = {<h3 style={{color:'white'}}>loading.......</h3>}
+         next={moreScroll} 
+         hasMore = {page < data.total_pages}
+        //  loader = {<h3 style={{color:'white'}}>loading.......</h3>}
          >
         
           {

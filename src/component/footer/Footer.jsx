@@ -12,7 +12,7 @@ export function Footer() {
             <li>FAQ</li>
             <li>Privacy Police</li>
             <li>Terms of Uses</li>
-            <li>My Blog</li>
+            <li><Link to={`https://technocrez.blogspot.com/`} className={style['link']}>My Blog</Link></li>
         </div>
         <div>
             <h2>Contact Us</h2>

@@ -23,8 +23,8 @@ export function Footer() {
         </div>
         <div>
             <h2>Explore</h2>
-            <li><Link to = {'/explore/movie'} reloadDocument className={style['link']}>Movies</Link></li>
-            <li><Link to = {'/explore/tv'} reloadDocument className={style['link']}>TV Shows</Link></li>
+            <li><Link to = {'/explore/movie'} className={style['link']}>Movies</Link></li>
+            <li><Link to = {'/explore/tv'} className={style['link']}>TV Shows</Link></li>
         </div>
         </div>
     </section>

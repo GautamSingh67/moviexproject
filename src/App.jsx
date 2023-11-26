@@ -33,6 +33,7 @@ function App() {
       <BrowserRouter>
       <Header />
         <Routes>
+          {/* <Route path='*' element={<Home/>}/> */}
           <Route path='/' element={<Home />} />
           <Route path='/search/:query' element={<SearchDetails />} />
           <Route path="/explore/movie" element={<Movie/>} />

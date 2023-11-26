@@ -1,7 +1,7 @@
 import React from 'react'
 import { Usefetch } from '../../customHook/Usefetch';
 import { useSelector } from 'react-redux';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import {useLocation, useNavigate } from 'react-router-dom';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Img } from '../lazyLoadImage/Img';
@@ -44,7 +44,7 @@ export function Similar() {
                         data.results.map((item, index) => {
                             const posterUrl = url.poster + item.poster_path
                             return <div key={index}>
-                                <Link reloadDocument><Img title={item.original_title} src={posterUrl} alt='image' onClick={() => movieDetail(item.id, item.media_type)} className={style['poster']} /></Link>
+                                <Img title={item.original_title} src={posterUrl} alt='image' onClick={() => movieDetail(item.id, item.media_type)} className={style['poster']} />
 
                             </div>
                         })

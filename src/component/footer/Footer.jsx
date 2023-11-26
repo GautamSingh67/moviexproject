@@ -8,7 +8,7 @@ export function Footer() {
         <div className={style['footer']}>
         <div>
             <li><Link to={"/"} reloadDocument className={style['link']}>Home</Link></li>
-            <li>About</li>
+            <li><Link to={"/about"} className={style['link']}>About</Link></li>
             <li>FAQ</li>
             <li>Privacy Police</li>
             <li>Terms of Uses</li>

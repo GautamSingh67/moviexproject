@@ -11,6 +11,7 @@ import { Footer } from './component/footer/Footer';
 import { Movie } from './pages/explore/movie/Movie';
 import { Tv } from './pages/explore/tv/Tv';
 import {MovieDetail} from './pages/details/MovieDetail';
+import { About } from './pages/about/About';
 
 function App() {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ function App() {
           <Route path="/explore/tv" element={<Tv/>} />
           <Route path='/:query/:query' element={<MovieDetail/>}/>
           <Route path='/explore/movie/:query' element = {<MovieDetail/>} />
+          <Route path='/about' element = {<About/>} />
         </Routes>
         <Footer/>
       </BrowserRouter>

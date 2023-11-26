@@ -1,0 +1,27 @@
+.div1{
+    clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 84%);
+    background-image: linear-gradient(black, white);
+    margin-top: 1rem;
+    font-family: serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20% 5%;
+}
+
+.div1 img{
+    width: 70%;
+    height: 100%;
+}
+.content1{
+    color: #005e5e;
+    font-size: 4rem;
+}
+.content2{
+    font-size: 2.5rem;
+    color: #005e5e;
+}
+.content3{
+    font-size: 1.5rem;
+}
